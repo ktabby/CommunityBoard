@@ -55,32 +55,27 @@
 </table>
 
 <!-- 페이징 -->
-<div style="text-align: center;">
-		<ul class="paging">
+<div class="paging">
+		<ul>
 			<c:if test="${paging.prev}">
 		    	<span>
-		    		<a href='<c:url value="/getBoardList?page=${paging.startPage - 1}&searchCondition=${search.searchCondition}&boardSearchWord=${search.boardSearchWord}"/>'>◀</a>
+		    		<a href='<c:url value="/getBoardList?page=${paging.startPage - 1}&searchCondition=${search.searchCondition}&boardSearchWord=${search.boardSearchWord}"/>'></a>
 		    	</span>
 		    </c:if>
 		    <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="num">
-				<!-- 선택 페이지인 경우 링크안생기게 처리 -->
 				<c:choose>
 					<c:when test="${paging.cri.page eq num}">
-						<li style="color: #355400; font-weight:bold; padding:3px 8px; border: 1px solid #dadada; background-color: pink;">
-							${num}
-						</li>
+						<span><a>${num}</a></span>
 					</c:when>
 					<c:otherwise>
-						<li>
-							<a href='<c:url value="/getBoardList?page=${num}&searchCondition=${search.searchCondition}&boardSearchWord=${search.boardSearchWord}"/>'>${num}</a>
-						</li>
+						<span><a href='<c:url value="/getBoardList?page=${num}&searchCondition=${search.searchCondition}&boardSearchWord=${search.boardSearchWord}"/>'>${num}</a></span>
 					</c:otherwise>
 				</c:choose>
 		    </c:forEach>
 		    <c:if test="${paging.next && paging.endPage > 0}">
-		    	<li>
-		    		<a href='<c:url value="/getBoardList?page=${paging.endPage + 1}&searchCondition=${search.searchCondition}&boardSearchWord=${search.boardSearchWord}"/>'>▶</a>
-		    	</li>
+		    	<span>
+		    		<a href='<c:url value="/getBoardList?page=${paging.endPage + 1}&searchCondition=${search.searchCondition}&boardSearchWord=${search.boardSearchWord}"/>'></a>
+		    	</span>
 		    </c:if>
 		</ul>
 </div>

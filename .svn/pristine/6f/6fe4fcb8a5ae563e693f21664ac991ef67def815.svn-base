@@ -11,26 +11,11 @@
 .dateText{color:rgb(174, 174, 174)}
 /* .eventBlock {display:none;} */
 
-/*페이징 관련 CSS부분*/
-.paging li {
-	list-style: none;
-	display: inline-block;
-}
-
-.paging a {
-	color: #355400;
-	font-weight: bold;
-	padding: 3px 8px;
-	border: 1px solid #dadada;
-	background-color: #cde7fe;
-}
-
 .list {
 	text-align:center;
 	width:100%;
 	padding-top:50px;
 	padding-right:10px;
-	
 	padding-left:10px;
 	height:100px;
 	line-height: 260%;

@@ -18,6 +18,7 @@
 <body>
 <!-- 헤더 -->
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
+본문 --
 	<div class="centerContent loginStyle">
 		<form id="insertFrm" action="./insertOk" method="POST">
 			<!-- header

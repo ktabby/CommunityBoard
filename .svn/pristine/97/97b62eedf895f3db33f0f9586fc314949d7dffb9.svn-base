@@ -19,7 +19,6 @@ public class Paging {
 	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
 		pagigData();
-
 	}
 	
 	private void pagigData() {
